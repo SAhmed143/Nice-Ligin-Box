@@ -1,0 +1,54 @@
+import 'package:flutter/material.dart';
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        title: 'Game',
+        home: Scaffold(
+          appBar: AppBar(
+            title: Text('My_Game'),
+          ),
+          body: Container(
+            alignment: Alignment.center,
+            padding: EdgeInsets.all(50),
+            color: Colors.blueGrey,
+            child: Column(
+              children: [
+                CircleAvatar(
+                  radius: 50,
+                ),
+                SizedBox(
+                  height: 30,
+                ),
+                TextField(
+                  decoration: InputDecoration(
+                    hintText: "Input Email",
+                    labelText: "Email",
+                    hintStyle: TextStyle(color: Colors.white),
+                    border: OutlineInputBorder(borderSide: BorderSide()),
+                  ),
+                ),
+                SizedBox(
+                  height: 15,
+                ),
+                TextField(
+                  decoration: InputDecoration(
+                    hintText: "Input Password",
+                    labelText: "Paswrod",
+                    hintStyle: TextStyle(color: Colors.white),
+                    border: OutlineInputBorder(borderSide: BorderSide()),
+                  ),
+                ),
+                SizedBox(
+                  height: 50,
+                ),
+                ElevatedButton(onPressed: () {}, child: Text("Login")),
+              ],
+            ),
+          ),
+        ));
+  }
+}
